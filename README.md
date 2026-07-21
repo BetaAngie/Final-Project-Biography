@@ -33,6 +33,6 @@ As mentioned in the the wireframes, I will have a navgiation bar above that can 
 - Github Pages
 
 ## Credits
-W3Schools, Google 
+W3Schools, Google, Youtube
 
 ## Future Improvements 
