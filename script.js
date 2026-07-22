@@ -1,3 +1,4 @@
+// Mobile Navigaition Bar
 const menu = document.getElementById("mobile-menu");
 const navLinks = document.getElementById("nav-links");
 
@@ -16,7 +17,7 @@ function checkScreenSize() {
 }
 
 checkScreenSize();
-
+// Change Image Screen on Mobile 
 window.addEventListener("resize", checkScreenSize);
 
 const heroImage = document.querySelector(".hero-image img");
@@ -34,6 +35,29 @@ function swapImage(){
 swapImage();
 window.addEventListener("resize", swapImage);
 
+//Typewriting Animation 
+const text =
+"My name is Lumi. I'm a Visual Art Management student at UCF who enjoys game design, cosplay, rhythm games, and creating digital art.";
+
+let index = 0;
+
+function typeWriter(){
+
+    if(index < text.length){
+
+        document.getElementById("typing").innerHTML += text.charAt(index);
+
+        index++;
+
+        setTimeout(typeWriter,40);
+
+    }
+
+}
+
+window.onload = typeWriter;
+
+//Commission Pricing 
 const pricing = [
 
   {
