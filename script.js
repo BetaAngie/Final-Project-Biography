@@ -88,7 +88,22 @@ if (month < 0 || (month === 0 && today.getDate() < birthday.getDate())) {
     age--;
 }
 
+//Lightbox Images - Portfolio
+function openImage(image)[
+    document.getElementByID("lightbox").style.display = "flex";
+    document.getElementByID("lightboxImage").src = image.src; }
+
+function closeImage(){
+    document.getElementById("lightbox").style.display = "none";
+}
+
 document.getElementById("age").textContent = age;
+
+//Resume Download 
+let downloads = 0; 
+function resumeDownload() {
+    downloads++;
+    document.getElementById("downloadCount").textContent = downloads; }
 
 //Commission Pricing 
 const pricing = [
