@@ -1,0 +1,53 @@
+const pricing = [
+
+  {
+    title:"Character Prices"
+
+    items: [
+        "Headshot - $10",
+        "Bust - $20",
+        "Half Body - $35",
+        "Full Body - $50,
+        "Chibis - $15"
+        ]
+},
+
+{
+  title:"Illustrations"
+
+  items: [
+    "Reference Sheet - $25",
+    "Illustration Banners - $30",
+    "Character Illustration - $55",
+    "Custom Scene - $70+ (Contact Me for more details)"
+    ]
+}
+
+{
+  title:"Add-Ons"
+
+  items: [
+    "Add Prop/Object - +$5",
+    "Simple Background - +$5",
+    "Detailed Background - +$15",
+    'Extra Character - +50% of Price"
+    "Commercial Use - Contact for more Info"
+  ]
+}
+
+];
+
+let currentCategory = 0;
+
+function displayCategory() {
+  document.getElementById("category-title").textContent =
+    pricing[currentCategory].title;
+
+  let html ="<ul>";
+  pricing[currentCategory].items.forEach(function(item)
+                                         html += "<li>" + item + "</li>";
+});
+
+html += "</ul>";
+document.getElementById("price-list"
+        
