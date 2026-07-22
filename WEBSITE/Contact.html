@@ -84,29 +84,25 @@
 
             <h2>Send Me a Message</h2>
             
-<!-- Create Backend or Form Service -->
-            <form>
-                <input type='text' required>
-                <input type="email" required>
-                <textarea required></textarea>
+            <form action="https://formspree.io/f/mrenakqk" method="POST">
 
                 <label for="name">Name</label><br>
                 <input 
-                    type="text" 
+                    type="text" required
                     id="name" 
                     name="name"
                     placeholder="Your Name...">
                 <br><br>
 
                 <label for="email">Email</label><br>
-                <input type="email" 
+                <input type="email" required
                     id="email" 
                     name="email"
                     placeholder="no@noemail.com">
                 <br><br>
 
                 <label for="subject">Subject</label><br>
-                <input type="text" 
+                <input type="text" required
                     id="subject" 
                     name="subject"
                     placeholder="Tell me about your inquiry...">
