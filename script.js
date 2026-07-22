@@ -170,7 +170,8 @@ const pricing = [
         "Bust - $20",
         "Half Body - $35",
         "Full Body - $50,
-        "Chibis - $15"
+        "Chibis - $15",
+        "Emotes - $10"
         ]
 },
 
@@ -186,11 +187,23 @@ const pricing = [
 }
 
 {
+    title:"Wig Commissions",
+
+    items: [
+        "Simplistic Styling - $30+",
+        "Complex Styling - Contact for Price",
+        "Add Glitter - +$10",
+        "Add Shading - +$30"
+        ]
+}
+
+{
   title:"Add-Ons"
 
   items: [
     "Add Prop/Object - +$5",
     "Simple Background - +$5",
+    "Full Render - +$10",
     "Detailed Background - +$15",
     'Extra Character - +50% of Price"
     "Commercial Use - Contact for more Info"
@@ -229,3 +242,18 @@ function previousCategory() {
   displayCategory();
 }
 displayCategory();
+
+//Commission Status 
+const commissionsOpen = true;
+// Change False for Off; True for On
+const status = document.getElementById("status");
+
+if (commissionsOpen) {
+
+    status.textContent = "🟢 Commissions Open";
+
+} else {
+
+    status.textContent = "🔴 Commissions Closed";
+
+}
