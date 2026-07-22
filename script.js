@@ -257,3 +257,12 @@ if (commissionsOpen) {
     status.textContent = "🔴 Commissions Closed";
 
 }
+
+//Commission Smooth Scroll to Contact 
+document.querySelector(".btn").addEventListener("click",function(e){
+
+e.preventDefault();
+
+window.location.href="Contact.html";
+
+});
