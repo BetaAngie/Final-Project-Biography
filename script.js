@@ -75,6 +75,20 @@ function newFact(){
         document.getElementById("fact").innerHTML = facts[random];
 }
 
+//Age 
+const birthday = new Date(2006, 1, 19);
+
+const today = new Date();
+
+let age = today.getFullYear() - birthday.getFullYear();
+
+const month = today.getMonth() - birthday.getMonth();
+
+if (month < 0 || (month === 0 && today.getDate() < birthday.getDate())) {
+    age--;
+}
+
+document.getElementById("age").textContent = age;
 
 //Commission Pricing 
 const pricing = [
