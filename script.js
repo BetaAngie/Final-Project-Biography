@@ -17,6 +17,7 @@ function checkScreenSize() {
 }
 
 checkScreenSize();
+
 // Change Image Screen on Mobile 
 window.addEventListener("resize", checkScreenSize);
 
@@ -56,6 +57,24 @@ function typeWriter(){
 }
 
 window.onload = typeWriter;
+
+//Fun Fact Button
+const facts = [
+    "I've been cosplaying since 2019!",
+    "I have been playing rhythm games since 2016.",
+    "I only been recently trying in my artwork since 2020.",
+    "I am the eldest of 4 girls."
+    "I have won Best Group and Best Cosplay for 2025 Supercon Talentshow.",
+    "I have played competitive gaming for 3 years now, I am just on a break."
+];
+
+function newFact(){
+    const random = 
+        Math.floor(Math.random()*facts.length);
+
+        document.getElementById("fact").innerHTML = facts[random];
+}
+
 
 //Commission Pricing 
 const pricing = [
