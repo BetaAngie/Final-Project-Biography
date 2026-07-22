@@ -49,5 +49,21 @@ function displayCategory() {
 });
 
 html += "</ul>";
-document.getElementById("price-list"
-        
+document.getElementById("prices-list").innerHTML = html; 
+}
+function nextCategory() {
+  currentCategory++;
+  if (currentCategory >= pricing.length) {
+    currentCategory = 0;
+  }
+  displayCategory();
+}
+
+function previousCategory() {
+  currentCategory--;
+  if (currentCategory < 0) {
+    currentCategory = pricing.length - 1;
+  }
+  displayCategory();
+}
+displayCategory();
