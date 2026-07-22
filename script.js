@@ -105,6 +105,60 @@ function resumeDownload() {
     downloads++;
     document.getElementById("downloadCount").textContent = downloads; }
 
+//Portfolio Search Bar
+function searchProjects() {
+
+    let input =
+    document.getElementById("searchBar").value.toLowerCase();
+
+    let projects =
+    document.querySelectorAll(".project");
+
+    projects.forEach(project => {
+
+        if(project.alt.toLowerCase().includes(input)){
+
+            project.style.display = "block";
+        }
+
+        else{
+            project.style.display = "none";
+
+        }
+
+    });
+
+}
+
+//Top Button 
+const topButton =
+document.getElementById("topButton");
+
+window.onscroll = function(){
+
+    if(document.body.scrollTop > 300 ||
+       document.documentElement.scrollTop > 300){
+
+        topButton.style.display = "block";
+
+    }
+
+    else{
+
+        topButton.style.display = "none";
+
+    }
+
+}
+
+function backToTop(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
 //Commission Pricing 
 const pricing = [
 
