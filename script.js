@@ -72,7 +72,7 @@ const facts = [
     "I started taking my artwork seriously in 2020.",
     "I am the eldest of four girls.",
     "I won Best Group and Best Cosplay at the 2025 Supercon Talent Show.",
-    "I've played competitive rhythm games for three years."
+    "I've played competitive gaming for three years."
 ];
 
 function newFact() {
