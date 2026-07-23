@@ -206,51 +206,83 @@ main{
     flex-direction:row;
     justify-content:space-between;
     align-items:flex-start;
-    
-    gap:60px;}
+
+    width:90%;
+    max-width:1200px;
+ 
+    gap:50px;}
 
 /*LEFT SIDE*/
     .contact-info{
         flex:1;
-        padding:40px;
+        padding:45px;
         box-sizing:border-box;
-        background:rgba(20,15,45,.45);
+        background:linear-gradient(
+            145deg,
+            rgba(216,180,254,.15),
+            rgba(20,15,45,.65));
+        
         backdrop-filter:blur(15px);
         border-radius:25px;
-        border:1px solid rgba(216,180,254,.35);}
+        border:1px solid rgba(216,180,254,.35);
+        box-shadow: 0 0 25px rgba(216,180,254,.15);}
     
 .contact-info h1{
-    margin-bottom:20px
+    margin-bottom:15px
 
     color:#F8F1FF;
     text-align:center;
-    font-size:2.6rem;}
+    font-size:2.8rem;
+    letter-spacing:2px;
+    text-shadow: 0 0 12px rgba(216,180,254,.5);}
+
+.contact-info p{
+    text-align:center;
+    color:#d9d4e8;
+    line-height:1.6;
+    margin-bottom:30px;}
 
 .contact-links{
     display:flex;
     flex-direction:column;
 
-    gap:18px;
-    margin-top:35px;}
+    gap:15px;
+    margin-top:25px;}
 
 .contact-links a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 18px;
+
     color:#D8B4FE;
     text-decoration:none;
     font-size:18px;
 
-    transition:.3s;}
+    background:rgba(255,255,255,.05);
+
+    border-radius:15px;
+    border:1px solid transparent;
+
+    transition:.3s ease;}
 
 .contact-links a:hover{
     color:white;
-    transform:translateX(8px);}
+    border-color:#D8B4FE;
+
+    transform:translateX(10px);
+
+    background:rgba(216,180,254,.12);
+    box-shadow:0 0 15px rgba(216,180,254,.35);}
 
 /* Social Links*/
 .social-links{
     display:flex;
     justify-content:center;
+    align-items:center;
 
-    gap:20px;
-    margin-top:30px;}
+    gap:25px;
+    margin-top:40px;}
 
 .social-links a{
     display:flex;
@@ -262,16 +294,19 @@ main{
 
     color:#ffffff;
     text-decoration:none;
+    font-size:22px;
 
     background: rgba(200,162,255,.15);
     border-radius:50%;
+    border:1px solid rgba(216,180,254,.35);
 
-    transition:0.3 ease;}
+    transition: .3s ease;}
 
 .social-links a:hover{
-    transform:translateY(-6px);
-
-    box-shadow: 0 0 18px rgba(216,180,254,.5);}
+    transform:translateY(-8px);
+    color:#D8B4F3;
+    background:rbga(216,180,254,.3);
+    box-shadow: 0 0 18px rgba(216,180,254,.6);}
     
 /*RIGHT SIDE*/
 .contact-form{
