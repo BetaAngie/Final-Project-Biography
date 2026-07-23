@@ -214,11 +214,11 @@ function backToTop() {
 
 }
 
-// =============================
-// COMMISSION PRICING
-// =============================
+/* =====================================================
+   COMMISSIONS - PRICING CAROUSEL
+===================================================== */
 
-const pricing = [
+const pricingCategories = [
 
     {
         title: "Characters",
@@ -266,104 +266,122 @@ const pricing = [
 
 ];
 
-let current = 0;
+let currentCategory = 0;
 
-const title = document.getElementById("category-title");
-const list = document.getElementById("prices-list");
-const card = document.getElementById("price-card");
+const priceCard = document.getElementById("price-card");
+const categoryTitle = document.getElementById("category-title");
+const pricesList = document.getElementById("prices-list");
 
-function updateCategory(direction = "next") {
 
-    if (!title || !list || !card) return;
+/* ==========================================
+   DISPLAY CATEGORY
+========================================== */
 
-    const outClass =
-        direction === "next"
-            ? "slide-out-left"
-            : "slide-out-right";
+function displayCategory(direction = null) {
 
-    const inClass =
-        direction === "next"
-            ? "slide-in-right"
-            : "slide-in-left";
+    if (!priceCard || !categoryTitle || !pricesList) return;
 
-    card.classList.add(outClass);
+    if (direction) {
+
+        priceCard.classList.add(
+            direction === "next"
+                ? "slide-out-left"
+                : "slide-out-right"
+        );
+
+    }
 
     setTimeout(() => {
 
-        card.classList.remove(
+        priceCard.classList.remove(
             "slide-out-left",
             "slide-out-right"
         );
 
-        title.textContent = pricing[current].title;
+        const current = pricingCategories[currentCategory];
 
-        list.innerHTML = "";
+        categoryTitle.textContent = current.title;
 
-        pricing[current].items.forEach(item => {
+        pricesList.innerHTML = "";
 
-            const p = document.createElement("p");
+        current.items.forEach(item => {
 
-            p.textContent = item;
+            const paragraph = document.createElement("p");
 
-            list.appendChild(p);
+            paragraph.textContent = item;
+
+            pricesList.appendChild(paragraph);
 
         });
 
-        card.classList.add(inClass);
+        if (direction) {
 
-        setTimeout(() => {
-
-            card.classList.remove(
-                "slide-in-right",
-                "slide-in-left"
+            priceCard.classList.add(
+                direction === "next"
+                    ? "slide-in-right"
+                    : "slide-in-left"
             );
 
-        }, 350);
+            setTimeout(() => {
 
-    }, 350);
+                priceCard.classList.remove(
+                    "slide-in-right",
+                    "slide-in-left"
+                );
+
+            }, 350);
+
+        }
+
+    }, direction ? 350 : 0);
 
 }
+
+
+/* ==========================================
+   NEXT CATEGORY
+========================================== */
 
 function nextCategory() {
 
-    current++;
+    currentCategory++;
 
-    if (current >= pricing.length) {
+    if (currentCategory >= pricingCategories.length) {
 
-        current = 0;
+        currentCategory = 0;
 
     }
 
-    updateCategory("next");
+    displayCategory("next");
 
 }
+
+
+/* ==========================================
+   PREVIOUS CATEGORY
+========================================== */
 
 function previousCategory() {
 
-    current--;
+    currentCategory--;
 
-    if (current < 0) {
+    if (currentCategory < 0) {
 
-        current = pricing.length - 1;
+        currentCategory = pricingCategories.length - 1;
 
     }
 
-    updateCategory("prev");
+    displayCategory("prev");
 
 }
 
-if (title && list && card) {
 
-    title.textContent = pricing[current].title;
+/* ==========================================
+   INITIALIZE
+========================================== */
 
-    pricing[current].items.forEach(item => {
+document.addEventListener("DOMContentLoaded", () => {
 
-        const p = document.createElement("p");
+    displayCategory();
 
-        p.textContent = item;
-
-        list.appendChild(p);
-
-    });
-
-}
+});
