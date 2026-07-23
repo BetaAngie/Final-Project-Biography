@@ -1,160 +1,94 @@
-/* MAIN PAGE */
+/* ------------- MAIN PAGE -------------*/
 body{
-
+    /*Background/Layout*/
     margin:0;
     padding-top:75px;
     min-height:100vh;
+    overflow-x:hiden;
 
+    /*Text*/
     color:#D8B4FE;
-    background-color: #0d1224;
-
     text-shadow:
     0 0 6px rgba(216,180,254,.5);
 
-
     /* DESKTOP BACKGROUND */
+    background-color: #0d1224;
     background-image:
     linear-gradient(
         rgba(0,0,0,.45),
         rgba(0,0,0,.45)
     ),
     url("images/galaxygif.gif");
-
-
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
+    background-attachment:scroll;}
 
-    background-attachment:scroll;
-    background-color: #0d1224;
-
-    overflow-x:hidden;
-
-}
-
-
-/* NAVIGATION BAR
- */
-
-
+/* ------------ NAVIGATION BAR --------------*/
+/*HEADER*/
 header{
-
     position:fixed;
-
     top:0;
     left:0;
-
     width:100%;
+    z-index:9999;}
 
-    z-index:9999;
-
-}
-
-
-
+/*Navigation Bar*/
 .navbar{
+    display:flex;
+    align-items:center;
 
     height:75px;
+    padding: 0 40px;
 
-    display:flex;
-
-    align-items:center;
-
-    padding:0 40px;
-
-    background:
-    rgba(20,15,45,.75);
-
-
+    background: rgba(20,15,45,.75);
     backdrop-filter:blur(16px);
 
+    border-buttom:2px solid rgba(216,180,254,.35);
+    box-shadow:0 4px 25px rgba(0,0,0,.45);}
 
-    border-bottom:
-    2px solid rgba(216,180,254,.35);
-
-
-    box-shadow:
-    0 4px 25px rgba(0,0,0,.45);
-
-}
-
-
-
+/*Navigation Link*/
 .nav-links{
-
     display:flex;
-
     align-items:center;
-
     gap:35px;
-
+    
     list-style:none;
-
     padding:0;
-
-    margin:0;
-
-}
-
-
+    margin:0;}
 
 .nav-links a{
-
-    color:#D8B4FE;
-
-    text-decoration:none;
-
-    font-size:18px;
-
+    display:block;
     padding:10px 18px;
-
     border-radius:10px;
 
-    transition:.3s;
+    color:#D8B4F3;
+    text-decoration:none;
+    font-size:18px;
 
-}
-
-
+    transition:
+        background-color 0.3 ease,
+        color 0.3 ease;}
 
 .nav-links a:hover{
+    color:#ffffff;
+    background: rgba(200,162,255,.18);}
 
-    color:white;
-
-    background:
-    rgba(200,162,255,.18);
-
-}
-
-
-
+/*Navigation Icon*/
 .star{
-
     margin-left:auto;
 
     font-size:32px;
+    color:#FFF3B0;}
 
-    color:#FFF3B0;
-
-}
-
-
-
-/* Hamburger */
-
+/* Mobile Hamburger Menu */
 .menu-toggle{
-
     display:none;
-
+    
     cursor:pointer;
 
     font-size:32px;
-
-    color:white;
-
-}
-
-
-
+    color:white;}
 /* =========================
    HERO
 ========================= */
