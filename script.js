@@ -8,6 +8,12 @@ if (menu && navLinks) {
     });
 }
 
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+
 // HOME PAGE IMAGE
 const heroImage = document.querySelector(".hero-image img");
 
