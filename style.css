@@ -476,8 +476,10 @@ main{
 .contact-form input,
 .contact-form textarea{
     width:100%;
+    max-width:100%;
     padding:15px;
-
+    
+    box-sizing:border-box;
     border-radius:15px;
     border:1px solid rgba(216,180,254,.4);
 
@@ -622,48 +624,20 @@ textarea{
     /* =========================
        HERO SECTION
     ========================= */
-
-
     main{
-
-        padding-top:20px;
-
-    }
+        padding-top:20px; }
 
 
 
     .hero{
-
-
         flex-direction:column-reverse;
-
-
         justify-content:center;
-
-
         align-items:center;
-
-
         width:90%;
-
-
         min-height:auto;
-
-
         margin:0 auto;
-
-
         gap:35px;
-
-
-        padding-bottom:50px;
-
-
-    }
-
-
-
-
+        padding-bottom:50px;}
 
     /* IMAGE FIX */
 
@@ -845,6 +819,10 @@ textarea{
 
     /* Contact Page */
 
+    .contact-page{
+        width:95%;
+        margin:20px auto;
+
     .contact-container{
 
         flex-direction:column;
@@ -861,19 +839,14 @@ textarea{
         margin:0;}
 
     .contact-info{
-
-        text-align:center;
-
-    }
+        text-align:center;}
 
     .contact-links{
 
         align-items:center;
-
     }
 
     .social-links{
-
         justify-content:center;
 
     }
