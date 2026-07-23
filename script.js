@@ -182,7 +182,7 @@ function backToTop() {
 const pricing = [
 
 {
-title:"Character Prices",
+title:"Characters",
 
 items:[
 "Headshot - $10",
