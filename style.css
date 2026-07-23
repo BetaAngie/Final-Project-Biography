@@ -428,6 +428,21 @@ textarea{
 /* =========================
    MOBILE RESPONSIVE DESIGN
 ========================= */
+@media screen and (max-width:900px){
+
+    body{
+
+        background-color:#0d1224;
+
+        background-image:none;
+
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:cover;
+
+    }
+
+}
 
 @media screen and (max-width: 900px){
 
