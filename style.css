@@ -459,14 +459,50 @@ main{
         width:150px;}
     
 /*Buttons*/
-    .hero-buttons{
-        width:100%;
-        align-items:cetner;}
+ */
 
-    .btn{
-        width:100%;
-        max-width:260px}
-        box-sizing:border-box;}
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    gap: 18px;}
+
+.btn {
+    width: 90%;
+    max-width: 350px;
+    min-height: 55px;
+    padding: 16px 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    background: rgba(200,162,255,.18);
+    border-radius: 50px;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;}
+
+.btn:hover,
+.btn:active {
+    transform: translateY(-3px);
+
+    background: rgba(200,162,255,.35);
+
+    box-shadow:
+        0 0 20px rgba(216,180,254,.45);
     
 /* ========================= CONTACT PAGE MOBILE ========================= */
 /* Contact Page */
