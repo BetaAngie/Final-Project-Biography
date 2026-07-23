@@ -339,7 +339,60 @@ main{
 
 }
 
+/* =========================
+    CONTACT ME SECTION 
+ ======================== */
 
+.contact-form{
+    max-width:700px;
+    margin:60px auto;
+    padding:40px;
+
+    border-radius:25px;
+    border:1px solid rgba(216,180,253,.35);
+    box-shadow:
+        0 0 20px rgba(200,162,255,.15),
+        0 0 50px rgba(140,110,255,.25);
+    
+    background:rgba(20,15,45,.55);
+    backdrop-filter:blur(15px); }
+
+.contact-form h2{
+    text-align:center;
+    font-size:2.5rem;
+    color:#F8F1FF;
+
+    margin-bottom:15px;
+    text-shadow:
+        0 0 10px rgba(255,255,255,.4),
+        0 0 25px rgba(200,162,255,.5); }
+
+.contact-form input,
+contact-form textarea{
+    width:100%;
+    padding:15px;
+
+    border-radius:15px;
+    border:1px solid rgba(216,180,254,.4);
+
+    background:rgba(255,255,255,.05);
+    color:white;
+
+    font-size:16px;
+    outline:none;
+    transition:.4s;}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:#D8B4FE;
+
+    box-shadow:
+        0 0 15px rgba(216,180,254,.45);
+
+    background:rgba(255,255,255,.09);
+}
+    
 /*Contact Me Text Box*/
 textarea{
 
@@ -351,8 +404,41 @@ textarea{
 
 }
 
+.contact-form input[type="submit"]{
 
+    margin-top:20px;
 
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6F5BFF,
+            #B388FF
+        );
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.contact-form input[type="submit"]:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 25px rgba(179,136,255,.6);
+}
 
 /* =========================
    MOBILE RESPONSIVE DESIGN
