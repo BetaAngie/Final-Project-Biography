@@ -336,6 +336,28 @@ main{
     CONTACT ME SECTION 
  ======================== */
 
+.contact-page{
+    width:90%;
+    max-width:1400px;
+
+    margin:40px auto;}
+
+.contact-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:60px;
+
+/*LEFT SIDE*/
+    .contact-info{
+        flex:1;
+        padding:40px;
+
+        background:rgba(20,15,45,.45);
+        backdrop-filter:blur(15px);
+        border-radius:25px;
+        border:1px solid rgba(216,180,254.35);}
+
 .contact-form{
     max-width:700px;
     margin:60px auto;
