@@ -833,11 +833,23 @@ textarea{
     .contact-info,
     .contact-form{
         width:100%;
-        max-width:700px;    }
+        max-width:700px;
+        padding:25px;
+        margin:0;
+        box-size:border-box;}
 
     .confrat-form{
         margin:0;}
 
+    .contact-form label{
+        display:block;}
+
+    .contact-form input,
+    .contact-form textarea{
+        width:100%;
+        max-width:100%;
+        box-sizing:border-box;}
+        
     .contact-info{
         text-align:center;}
 
