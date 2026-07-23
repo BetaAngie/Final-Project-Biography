@@ -269,15 +269,15 @@ main{
     display:flex;
     justify-content:center;
     align-items:center;
+    flex-wrap:nowrap;
 
-    gap:35px;
-    margin:45px auto;}
+    gap:10px}
 
 /*Price Card*/
 .price-card{
-    width:450px;
-    min-height:350px;
-    padding:35px;
+    width:100%;
+    max-width:300px;
+    padding:20px;
 
     background:rgba(20,15,45,.45);
     backdrop-filter:blur(15px);
