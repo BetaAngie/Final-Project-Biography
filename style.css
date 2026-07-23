@@ -365,7 +365,7 @@ body{
         padding-top:75px;
 
         background-color:#0d1224;
-        backgroun-image:none;
+        background-image:none;
         background-position:center;
 
         overflow-x:hidden;}
@@ -422,9 +422,10 @@ body{
 /* Hero Section */
     main{
         padding-top:20px;
-        width:100%}
+        width:100%;}
 
     .hero{
+        width:100%;
         flex-direction:column-reverse;
         text-align:center;
         box-size:border-box;
@@ -451,13 +452,12 @@ body{
 
     /* CONTENT*/
      .hero-content {
-        width: 95%;
-        max-width: 500px;
-        padding: 40px 30px;
-        margin: 0 auto;
-        box-sizing: border-box;
-        background: rgba(20,15,45,.55);
-
+        width:100%;
+         max-width:none;
+         padding:40px 25px;
+         margin:0 auto;
+         box-sizing:border-box;
+         background:rgba(20,15,45,.55);
         border-radius: 30px;}
 
     .hero-content h1 {
@@ -514,14 +514,14 @@ body{
     background: rgba(200,162,255,.35);
 
     box-shadow:
-        0 0 20px rgba(216,180,254,.45);
+        0 0 20px rgba(216,180,254,.45);}
     
 /* ========================= CONTACT PAGE MOBILE ========================= */
 /* Contact Page */
     .contact-page{
         width:100%;
         padding:0 20px;
-        box-sizing:border-box;
+        box-sizing:border-box;}
 
     .contact-container{
         flex-direction:column;
@@ -534,7 +534,7 @@ body{
         width:100%;
         max-width:none;
         padding:25px 20px; 
-        box-size:border-box;}
+        box-sizing:border-box;}
 
     .contact-form label{
         display:block;}
