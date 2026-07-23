@@ -355,7 +355,11 @@ main{
 
 /* ========================= MOBILE RESPONSIVENESS DESIGN =============================== */
 @media screen and (max-width: 900px){
-
+html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;}
 /*Background settings*/
     body{
         padding-top:75px;
@@ -417,12 +421,15 @@ main{
     
 /* Hero Section */
     main{
-        padding-top:20px;}
+        padding-top:20px;
+        width:100%}
 
     .hero{
         flex-direction:column-reverse;
         text-align:center;
-        gap:40px;}
+        box-size:border-box;
+        gap:30px;
+        padding:20px;}
 
     .hero-image{
         width:100%;
@@ -435,9 +442,9 @@ main{
         opacity:1;}
 
     .hero-image img{
-        width:280px;
-        height:280px;
-        max-width:90vw;
+        width:min(75vw,280px);
+        height:auto;
+        aspect-ratio:1/1;
         
         display:block;
         object-fit:cover;}
@@ -445,8 +452,8 @@ main{
     /* CONTENT*/
     .hero-content{
         width:100%;
-        max-width:100px;
-        padding:30px 20px;
+        max-width:none;
+        padding:25px 20px;
         box-sizing:border-box;}
 
     .hero-content h1{
@@ -472,7 +479,7 @@ main{
 
 .btn {
     width: 90%;
-    max-width: 350px;
+    max-width: none;
     min-height: 55px;
     padding: 16px 25px;
 
@@ -508,20 +515,21 @@ main{
 /* ========================= CONTACT PAGE MOBILE ========================= */
 /* Contact Page */
     .contact-page{
-        width:95%;
-        margin:20px auto;}
+        width:100%;
+        padding:0 20px;
+        box-sizing:border-box;
 
     .contact-container{
         flex-direction:column;
         align-items:center;
         gap:35px;}
+        width:100%;
 
     .contact-info,
     .contact-form{
         width:100%;
-        max-width:700px;
-        padding:25px;
-        margin:0;
+        max-width:none;
+        padding:25px 20px; 
         box-size:border-box;}
 
     .contact-form label{
