@@ -14,24 +14,6 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     });
 });
 
-// HOME PAGE IMAGE
-const heroImage = document.querySelector(".hero-image img");
-
-function swapImage() {
-    if (!heroImage) return;
-
-    if (window.innerWidth <= 768) {
-        heroImage.src = "images/mobilePortrait.png";
-    } else {
-        heroImage.src = "images/desktopPortrait.png";
-    }
-}
-
-if (heroImage) {
-    swapImage();
-    window.addEventListener("resize", swapImage);
-}
-
 // ABOUT ME ANIMATION
 const typingElement = document.getElementById("typing");
 
@@ -306,15 +288,4 @@ if(document.getElementById("category-title")){
 }
 
 
-// COMMISSION STATUS
-const status = document.getElementById("status");
 
-if(status){
-
-    const commissionsOpen = true;
-
-    status.textContent = commissionsOpen
-        ? "🟢 Commissions Open"
-        : "🔴 Commissions Closed";
-
-}
