@@ -265,6 +265,32 @@ main{
     text-align:center;
     padding:70px 0;}
 
+.pricing-slider{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:35px;
+    margin:45px auto;}
+
+/*Price Card*/
+.price-card{
+    width:450px;
+    min-height:350px;
+    padding:35px;
+
+    background:rgba(20,15,45,.45);
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+    border:1px solid rgba(216,180,254,.35);
+    box-shadow:0 0 20px rgba(216,180,254,.15);}
+
+.price-card h3{
+    margin-bottom:25px;
+    font-size:2rem;
+    color:#D8B4FE;}
+
 .price-navigation{
     display:flex;
     justify-content:center;
@@ -303,15 +329,64 @@ main{
     transform:scale(.95);}
 
 #prices-list{
-    max-width:600px;
+    display:flex;
+    flex-direction:column;
 
-    margin:35px auto;
-    padding:30px;
+    gap:15px;
+    font-size:1.15rem;
 
-    background:rgba(20,15,45,.45);
+    color:white;}
 
-    border-radius:20px;
-    border:1px solid rgba(216,180,254,.35);}
+/* Animation */
+
+.slide-out-left{
+    animation:slideOutLeft .35s forwards;}
+
+.slide-in-right{
+    animation:slideInRight .35s forwards;}
+
+.slide-out-right{
+    animation:slideOutRight .35s forwards;}
+
+.slide-in-left{
+    animation:slideInLeft .35s forwards;}
+
+/* Keyframes */
+@keyframes slideOutLeft{
+    from{
+        opacity:1;
+        transform:translateX(0);}
+
+    to{
+        opacity:0;
+        transform:translateX(-60px);   }}
+
+@keyframes slideInRight{
+    from{
+        opacity:0;
+        transform:translateX(60px);    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);    }}
+
+@keyframes slideOutRight{
+    from{
+        opacity:1;
+        transform:translateX(0);}
+
+    to{
+        opacity:0;
+        transform:translateX(60px);}}
+
+@keyframes slideInLeft{
+    from{
+        opacity:0;
+        transform:translateX(-60px);    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);}}
 
 /*COMMISSION BUTTON*/
 .btn{
@@ -728,7 +803,20 @@ body{
         grid-template-columns:1fr;}
 
     .commission-gallery{
-        grid-template-columns:repeat(2,1fr);}}
+        grid-template-columns:repeat(2,1fr);}
+    
+     .pricing-slider{
+        gap:15px;}
+
+    .price-card{
+        width:100%;
+        max-width:300px;
+        padding:25px;}
+
+    .arrow-btn{
+        width:50px;
+        height:50px;
+        font-size:1.5rem;}}
     
 /* ==========================================
    CONTACT PAGE MOBILE
