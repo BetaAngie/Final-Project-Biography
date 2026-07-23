@@ -1,15 +1,20 @@
 // MOBILE NAVIGATION
-document.addEventListener("DOMContentLoaded", () => {
-    const menu = document.getElementById("mobile-menu");
-    const navLinks = document.getElementById("nav-links");
+document.addEventListener("DOMContentLoaded", function(){
 
-    if(menu && navLinks){
+    const menu = document.querySelector("#mobile-menu");
+    const nav = document.querySelector("#nav-links");
 
-        menu.addEventListener("click", () => {
 
-            navLinks.classList.toggle("active");
-        });
+    if(menu && nav){
+
+        menu.onclick = function(){
+
+            nav.classList.toggle("active");
+
+        };
+
     }
+
 });
 
 // ABOUT ME ANIMATION
