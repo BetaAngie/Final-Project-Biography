@@ -510,47 +510,79 @@ body{
 .btn:hover
     .btn:active {
     transform: translateY(-3px);
-
     background: rgba(200,162,255,.35);
-
     box-shadow:
-        0 0 20px rgba(216,180,254,.45);}
-    
-/* ========================= CONTACT PAGE MOBILE ========================= */
-/* Contact Page */
-    .contact-page{
+        0 0 20px rgba(216,180,254,.45);
+    }    
+/* ==========================================
+   CONTACT PAGE MOBILE
+========================================== */
+
+@media screen and (max-width:900px) {
+    /* CONTACT WRAPPER */
+    .contact-page {
         width:100%;
         padding:0 20px;
-        box-sizing:border-box;}
+        margin:20px auto;
+        box-sizing:border-box;  }
 
-    .contact-container{
+    /* STACK CONTACT SECTIONS */
+    .contact-container {
+        display:flex;
         flex-direction:column;
         align-items:center;
-        gap:35px;
-        width:100%;}
+        width:100%;
+        gap:35px; }
 
+    /* LEFT + RIGHT BOXES */
     .contact-info,
-    .contact-form{
+    .contact-form {
+        display:block;
         width:100%;
         max-width:none;
-        padding:25px 20px; 
-        box-sizing:border-box;}
+        padding:30px 20px;
+        box-sizing:border-box; }
 
-    .contact-form label{
-        display:block;}
-
-    .contact-form input,
-    .contact-form textarea{
-        width:100%;
-        max-width:100%;
-        box-sizing:border-box;}
-        
-    .contact-info{
+    /* CONTACT INFO */
+    .contact-info {
         text-align:center;}
 
-    .contact-links{
-        align-items:center;}
+    .contact-links {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:18px;}
 
-    .social-links{
-        justify-content:center;}
+    .social-links {
+        display:flex;
+        justify-content:center;
+        gap:20px; }
 
+    /* CONTACT FORM */
+    .contact-form {
+        position:relative;
+        z-index:2;
+        overflow:visible;}
+
+    .contact-form h2 {
+        font-size:2.2rem;
+        text-align:center; }
+
+    .contact-form label {
+        display:block;
+        margin-bottom:8px;}
+    
+    .contact-form input,
+    .contact-form textarea {
+        display:block;
+        width:100%;
+        max-width:100%;
+        box-sizing:border-box; }
+
+    .contact-form textarea {
+        min-height:220px;}
+
+    .contact-form input[type="submit"] {
+        width:100%;
+        margin-top:20px;}
+}
