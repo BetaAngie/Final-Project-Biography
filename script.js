@@ -1,17 +1,15 @@
 // MOBILE NAVIGATION
-const menu = document.getElementById("mobile-menu");
-const navLinks = document.getElementById("nav-links");
+document.addEventListener("DOMContentLoaded", () => {
+    const menu = document.getElementById("mobile-menu");
+    const navLinks = document.getElementById("nav-links");
 
-if (menu && navLinks) {
-    menu.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
-}
+    if(menu && navLinks){
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-    });
+        menu.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+        });
+    }
 });
 
 // ABOUT ME ANIMATION
