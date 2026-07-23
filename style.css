@@ -433,3 +433,26 @@ main{
 
     }
 }
+@media (max-width: 768px) {
+  .hero-image {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+}
