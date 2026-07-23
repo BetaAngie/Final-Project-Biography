@@ -177,131 +177,156 @@ function backToTop() {
 
 }
 
+// =============================
 // COMMISSION PRICING
+// =============================
 
 const pricing = [
 
-{
-title:"Characters",
+    {
+        title: "Characters",
+        items: [
+            "Headshot - $10",
+            "Bust - $20",
+            "Half Body - $35",
+            "Full Body - $50"
+        ]
+    },
 
-items:[
-"Headshot - $10",
-"Bust - $20",
-"Half Body - $35",
-"Full Body - $50",
-"Chibis - $15",
-"Emotes - $10"
-]
-},
+    {
+        title: "Illustrations",
+        items: [
+            "Emotes - $10",
+            "Chibis - $15",
+            "Reference Sheet - $25",
+            "Illustration Banner - $30",
+            "Character Illustration - $55",
+            "Custom Scene - $70+"
+        ]
+    },
 
-{
-title:"Illustrations",
+    {
+        title: "Wig Commissions",
+        items: [
+            "Simplistic Styling - $30+",
+            "Complex Styling - Contact for Price",
+            "Add Glitter - +$10",
+            "Add Shading - +$30"
+        ]
+    },
 
-items:[
-"Reference Sheet - $25",
-"Illustration Banner - $30",
-"Character Illustration - $55",
-"Custom Scene - $70+"
-]
-},
-
-{
-title:"Wig Commissions",
-
-items:[
-"Simplistic Styling - $30+",
-"Complex Styling - Contact for Price",
-"Add Glitter - +$10",
-"Add Shading - +$30"
-]
-},
-
-{
-title:"Add-Ons",
-
-items:[
-"Add Prop/Object - +$5",
-"Simple Background - +$5",
-"Full Render - +$10",
-"Detailed Background - +$15",
-"Extra Character - +50%",
-"Commercial Use - Contact Me"
-]
-}
+    {
+        title: "Add-Ons",
+        items: [
+            "Add Prop/Object - +$5",
+            "Simple Background - +$5",
+            "Full Render - +$10",
+            "Detailed Background - +$15",
+            "Extra Character - +50%",
+            "Commercial Use - Contact Me"
+        ]
+    }
 
 ];
 
 let current = 0;
 
-    const title = document.getElementById("category-title");
-    const list = document.getElementById("prices-list");
-    const card = document.getElementById("price-card".:
-    
-  function updateCategory(direction){
+const title = document.getElementById("category-title");
+const list = document.getElementById("prices-list");
+const card = document.getElementById("price-card");
 
-    // Animate out
-    card.classList.add(
+function updateCategory(direction = "next") {
+
+    if (!title || !list || !card) return;
+
+    const outClass =
         direction === "next"
-        ? "slide-out-left"
-        : "slide-out-right"
-    );
+            ? "slide-out-left"
+            : "slide-out-right";
+
+    const inClass =
+        direction === "next"
+            ? "slide-in-right"
+            : "slide-in-left";
+
+    card.classList.add(outClass);
 
     setTimeout(() => {
 
-        // Remove outgoing animation
         card.classList.remove(
             "slide-out-left",
             "slide-out-right"
         );
 
-        // Update content
-        title.textContent = categories[current].title;
+        title.textContent = pricing[current].title;
 
         list.innerHTML = "";
 
-        categories[current].prices.forEach(price => {
+        pricing[current].items.forEach(item => {
 
             const p = document.createElement("p");
-            p.textContent = price;
+
+            p.textContent = item;
+
             list.appendChild(p);
+
         });
 
-        // Animate in
-        card.classList.add(
-            direction === "next"
-            ? "slide-in-right"
-            : "slide-in-left"
-        );
+        card.classList.add(inClass);
 
         setTimeout(() => {
+
             card.classList.remove(
                 "slide-in-right",
                 "slide-in-left"
             );
-        },350);
-    },350);
+
+        }, 350);
+
+    }, 350);
+
 }
 
-function nextCategory(){
+function nextCategory() {
 
     current++;
 
-    if(current >= categories.length){
+    if (current >= pricing.length) {
+
         current = 0;
+
     }
+
     updateCategory("next");
+
 }
 
-function previousCategory(){
+function previousCategory() {
 
     current--;
 
-    if(current < 0){
-        current = categories.length - 1;
+    if (current < 0) {
+
+        current = pricing.length - 1;
+
     }
 
     updateCategory("prev");
+
 }
 
-// Load first category
-updateCategory("next");
+if (title && list && card) {
+
+    title.textContent = pricing[current].title;
+
+    pricing[current].items.forEach(item => {
+
+        const p = document.createElement("p");
+
+        p.textContent = item;
+
+        list.appendChild(p);
+
+    });
+
+}
