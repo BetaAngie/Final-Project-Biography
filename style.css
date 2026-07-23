@@ -375,7 +375,6 @@ main{
     border:1px solid rgba(216,180,254,.4);
 
     background:rgba(255,255,255,.05);
-    color:white;
 
     font-size:16px;
     outline:none;
@@ -415,14 +414,6 @@ textarea{
 
     border-radius:50px;
 
-    background:
-        linear-gradient(
-            90deg,
-            #6F5BFF,
-            #B388FF
-        );
-
-    color:white;
 
     font-size:18px;
 
