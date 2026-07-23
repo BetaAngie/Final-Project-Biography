@@ -1,39 +1,44 @@
-// MOBILE NAVIGATION
-document.addEventListener("DOMContentLoaded", function(){
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
 
-    const menu = document.querySelector("#mobile-menu");
-    const nav = document.querySelector("#nav-links");
+document.addEventListener("DOMContentLoaded", () => {
 
+    const menu = document.getElementById("mobile-menu");
+    const navLinks = document.getElementById("nav-links");
 
-    if(menu && nav){
+    if (menu && navLinks) {
 
-        menu.onclick = function(){
+        menu.addEventListener("click", () => {
 
-            nav.classList.toggle("active");
+            navLinks.classList.toggle("active");
 
-        };
+        });
 
     }
 
 });
 
-// ABOUT ME ANIMATION
+/* =====================================================
+   ABOUT ME - TYPEWRITER ANIMATION
+===================================================== */
+
 const typingElement = document.getElementById("typing");
 
 if (typingElement) {
 
-    const text =
+    const introduction =
         "My name is Lumi. I'm a Visual Art Management student at UCF who enjoys game design, cosplay, rhythm games, and creating digital art.";
 
-    let index = 0;
+    let currentCharacter = 0;
 
     function typeWriter() {
 
-        if (index < text.length) {
+        if (currentCharacter < introduction.length) {
 
-            typingElement.innerHTML += text.charAt(index);
+            typingElement.textContent += introduction.charAt(currentCharacter);
 
-            index++;
+            currentCharacter++;
 
             setTimeout(typeWriter, 40);
 
@@ -45,25 +50,34 @@ if (typingElement) {
 
 }
 
-// IMAGE CHANGES
-function changeImage(image) {
+/* =====================================================
+   ABOUT ME - IMAGE SWITCHER
+===================================================== */
+
+function changeImage(imagePath) {
 
     const aboutImage = document.querySelector(".about-image img");
 
-    if (aboutImage) {
-        aboutImage.src = image;
-    }
+    if (!aboutImage) return;
+
+    aboutImage.src = imagePath;
 
 }
 
-// RANDOMIZED FUN FACTS 
-const facts = [
+
+/* =====================================================
+   ABOUT ME - RANDOM FUN FACTS
+===================================================== */
+
+const funFacts = [
+
     "I've been cosplaying since 2019!",
     "I've been playing rhythm games since 2016!",
     "I started taking my artwork seriously in 2020.",
     "I am the eldest of four girls.",
     "I won Best Group and Best Cosplay at the 2025 Supercon Talent Show.",
     "I've played competitive gaming for three years."
+
 ];
 
 function newFact() {
@@ -72,47 +86,64 @@ function newFact() {
 
     if (!factElement) return;
 
-    const random = Math.floor(Math.random() * facts.length);
+    const randomIndex = Math.floor(Math.random() * funFacts.length);
 
-    factElement.textContent = facts[random];
+    factElement.textContent = funFacts[randomIndex];
 
 }
 
 
-// AGE AUTOMATICALLY UPDATES
+/* =====================================================
+   ABOUT ME - AUTOMATIC AGE
+===================================================== */
+
 const ageElement = document.getElementById("age");
 
 if (ageElement) {
 
+    // Month is zero-based (1 = February)
     const birthday = new Date(2006, 1, 19);
 
     const today = new Date();
 
-    let age = today.getFullYear() - birthday.getFullYear();
+    let currentAge =
+        today.getFullYear() - birthday.getFullYear();
 
-    const month = today.getMonth() - birthday.getMonth();
+    const monthDifference =
+        today.getMonth() - birthday.getMonth();
 
     if (
-        month < 0 ||
-        (month === 0 && today.getDate() < birthday.getDate())
+
+        monthDifference < 0 ||
+
+        (
+            monthDifference === 0 &&
+            today.getDate() < birthday.getDate()
+        )
+
     ) {
-        age--;
+
+        currentAge--;
+
     }
 
-    ageElement.textContent = age;
+    ageElement.textContent = currentAge;
 
 }
 
-// PORTFOLIO LIGHTBOX
-function openImage(image) {
+/* =====================================================
+   PORTFOLIO - IMAGE LIGHTBOX
+===================================================== */
+
+function openImage(selectedImage) {
 
     const lightbox = document.getElementById("lightbox");
     const lightboxImage = document.getElementById("lightboxImage");
 
     if (!lightbox || !lightboxImage) return;
 
+    lightboxImage.src = selectedImage.src;
     lightbox.style.display = "flex";
-    lightboxImage.src = image.src;
 
 }
 
@@ -120,50 +151,56 @@ function closeImage() {
 
     const lightbox = document.getElementById("lightbox");
 
-    if (lightbox) {
-        lightbox.style.display = "none";
-    }
+    if (!lightbox) return;
+
+    lightbox.style.display = "none";
 
 }
 
 
-// RESUME DOWNLOAD
-let downloads = 0;
+/* =====================================================
+   PORTFOLIO - RESUME DOWNLOAD COUNTER
+===================================================== */
+
+let downloadCount = 0;
 
 function resumeDownload() {
 
-    downloads++;
+    downloadCount++;
 
     const counter = document.getElementById("downloadCount");
 
-    if (counter) {
-        counter.textContent = downloads;
-    }
+    if (!counter) return;
+
+    counter.textContent = downloadCount;
 
 }
 
-// TOP SCROLL
+
+/* =====================================================
+   SCROLL TO TOP BUTTON
+===================================================== */
+
 const topButton = document.getElementById("topButton");
 
 if (topButton) {
 
     window.addEventListener("scroll", () => {
 
-        if (
-            document.documentElement.scrollTop > 300
-        ) {
+        const scrollPosition =
+            document.documentElement.scrollTop;
 
-            topButton.style.display = "block";
-
-        } else {
-
-            topButton.style.display = "none";
-
-        }
+        topButton.style.display =
+            scrollPosition > 300 ? "block" : "none";
 
     });
 
 }
+
+
+/* =====================================================
+   SMOOTH SCROLL TO TOP
+===================================================== */
 
 function backToTop() {
 
