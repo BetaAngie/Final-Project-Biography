@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Lumi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">☰</div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutMe.html">About Me</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="Commissions.html">Commissions</a></li>
+            <li><a href="Contact.html">Contact Me!</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="about-container">
+
+<!-- Add Image -->
+      <div class="about-image">
+            <img src="" alt="Photo of Lumi">
+        </div>
+<!-- Add Images -->
+    <div class="about-links">
+        <p onclick="changeImage('')">My Interests</p>
+        <p onclick="changeImage('')">My Goals</p>
+        <p onclick="changeImage('')">Fun Facts</p>
+    </div>
+
+        <div class="about-content">
+
+            <h1>About Me</h1>
+
+            <hr>
+
+            <h2>Hello!</h2>    
+
+            <p id="typing"></p>
+            <p>Age:
+            <span id="age"></span>
+            </p>
+            
+            <hr>
+
+            <h2>My Interests</h2>
+
+            <p>
+                Outside of school, I enjoy gaming; especially rhythm games; cosplaying,
+                digital art, and creating content. I enjoy learning
+                new creative skills and expressing myself through different forms of media.
+                I also enjoy hanging out with my friends and going on trips, whether they're far away or nearby. 
+            </p>
+
+            <hr>
+
+            <h2>My Goals</h2>
+
+            <p>
+                My main goal is to become a game artist and designer, which allows me to express
+                my creativity and contribution to the gaming industry. I will use this platform
+                to showcase my projects and artwork i've created for my passion of game design.
+            </p>
+
+            <hr>
+
+            <button onclick="newFact()">
+            Random Fun Fact
+            </button>
+
+            <p id="fact"></p>
+
+            <h3 id="category-title"></h3>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>    
+    
+</body>
+</html>

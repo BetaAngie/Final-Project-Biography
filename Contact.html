@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contact Me! | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">☰</div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutMe.html">About Me</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="Commissions.html">Commissions</a></li>
+            <li><a href="Contact.html">Contact Me!</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="contact-page">
+<!-- Left Side of Screen -->        
+        <section class="contact-info">
+
+            <h1>Contact Me</h1>
+            <hr>
+
+            <p>Feel free to reach out through any of the platforms below!</p>
+         
+            <p>
+                📧
+                <a href="mailto:youremail@example.com">
+                    Email 
+                </a>
+            </p>
+
+            <p>
+                💼
+                <a href="https://www.indeed.com/" target="_blank">
+                    Indeed 
+                </a>
+            </p>
+
+            <p>
+                📷
+                <a href="https://www.instagram.com/yourusername" target="_blank">
+                    Instagram
+                </a>
+            </p>
+
+            <hr>
+
+            <h3>Socials</h3>
+
+            <p>
+                <a href="https://x.com/yourusername" target="_blank">
+                    X / Twitter
+                </a>
+
+                &nbsp;&nbsp;&nbsp;
+
+                <a href="https://carrd.com/yourusername" target="_blank">
+                    Carrd
+                </a>
+
+                &nbsp;&nbsp;&nbsp;
+
+                <a href="https://www.tiktok.com/@yourusername" target="_blank">
+                    TikTok
+                </a>
+            </p>
+
+        </section>
+
+<hr>        
+<!-- Right Side -->
+        <section class='contact-form'>
+
+            <h2>Send Me a Message</h2>
+            
+            <form action="https://formspree.io/f/mrenakqk" method="POST">
+
+                <label for="name">Name</label><br>
+                <input 
+                    type="text" required
+                    id="name" 
+                    name="name"
+                    placeholder="Your Name...">
+                <br><br>
+
+                <label for="email">Email</label><br>
+                <input type="email" required
+                    id="email" 
+                    name="email"
+                    placeholder="no@noemail.com">
+                <br><br>
+
+                <label for="subject">Subject</label><br>
+                <input type="text" required
+                    id="subject" 
+                    name="subject"
+                    placeholder="Tell me about your inquiry...">
+                <br><br>
+
+                <label for="message">Message</label><br>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="12">
+                    
+                    </textarea><br><br>
+
+                <input type="submit" value="Send Message">
+
+            </form>
+
+        </section>
+
+    </main>
+
+<script src="script.js"></script>    
+    
+</body>
+</html>
