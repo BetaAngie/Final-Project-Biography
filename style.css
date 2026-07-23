@@ -246,18 +246,17 @@ main{
     display:flex;
     flex-direction:column;
 
-    gap:15px;
-    margin-top:25px;}
+    gap:22px;
+    margin-top:35px;}
 
 .contact-links a{
     display:flex;
     align-items:center;
-    gap:15px;
-    padding:14px 18px;
+    gap:18px;
 
     color:#D8B4FE;
     text-decoration:none;
-    font-size:18px;
+    font-size:1.1rem;
 
     background:rgba(255,255,255,.05);
 
@@ -270,10 +269,32 @@ main{
     color:white;
     border-color:#D8B4FE;
 
-    transform:translateX(10px);
+    transform:translateX(8px);
 
     background:rgba(216,180,254,.12);
     box-shadow:0 0 15px rgba(216,180,254,.35);}
+
+.contact-links i{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+
+    color:#F8F1FF;
+    background:rgba(216,180,254,.18);
+
+    border:1px solid rgba(216,180,254,.35);
+    border-radius:50%;
+
+    transition:.3s ease;}
+
+.contact-links span{
+    color:#D8B4FE;
+    transtition: .3s ease;}
 
 /* Social Links*/
 .social-links{
@@ -310,6 +331,14 @@ main{
 
 .social-links a i{
     font-size:26px;}
+
+.contact-links a:hover i{
+    background:rgba(216,180,254,.35);
+    box-shadow:0 0 15px rgba(216,180,254,.45);}
+
+.contact-links a:hover span{
+    color:white;
+    text-decoration:underline;}
     
 /*RIGHT SIDE*/
 .contact-form{
