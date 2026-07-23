@@ -346,7 +346,7 @@ main{
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
-    gap:60px;
+    gap:60px;}
 
 /*LEFT SIDE*/
     .contact-info{
@@ -356,7 +356,7 @@ main{
         background:rgba(20,15,45,.45);
         backdrop-filter:blur(15px);
         border-radius:25px;
-        border:1px solid rgba(216,180,254.35);}
+        border:1px solid rgba(216,180,254,.35);}
     
 .contact-info h1,
 .contact-form h2{
@@ -990,40 +990,45 @@ textarea{
     /* =========================
    CONTACT PAGE MOBILE
 ========================= */
+@media screen and (max-width:900px){
 
-.contact-container{
+    /* Contact Page */
 
-    flex-direction:column;
+    .contact-container{
 
-    align-items:center;
+        flex-direction:column;
 
-    gap:35px;
+        align-items:center;
 
-}
+        gap:35px;
 
-.contact-info,
-.contact-form{
+    }
 
-    width:100%;
+    .contact-info,
+    .contact-form{
 
-    max-width:700px;
+        width:100%;
 
-}
+        max-width:700px;
 
-.contact-info{
+    }
 
-    text-align:center;
+    .contact-info{
 
-}
+        text-align:center;
 
-.contact-links{
+    }
 
-    align-items:center;
+    .contact-links{
 
-}
+        align-items:center;
 
-.social-links{
+    }
 
-    justify-content:center;
+    .social-links{
+
+        justify-content:center;
+
+    }
 
 }
