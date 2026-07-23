@@ -79,26 +79,30 @@
     <hr>
 
     <!-- Pricing -->
-    <section class="pricing">
+<section class="pricing">
 
-        <h2>Pricing</h2>
+    <h2>Pricing</h2>
 
-        <div class="price-navigation">
-                <button onclick="previousCategory()">&#10094;</button>
-                <h3 id="category-title"></h3>
-                <button onclick="nextCategory()">&#10095;</button>
+    <div class="pricing-slider">
+        <button class="arrow-btn" onclick="previousCategory()">
+            &#10094;
+        </button>
+
+        <div class="price-card">
+            <h3 id="category-title"></h3>
+            <div id="prices-list"></div>
         </div>
 
-        <div id="prices-list"></div>
-        
-        <br>
+        <button class="arrow-btn" onclick="nextCategory()">
+            &#10095;
+        </button>
+    </div>
 
+    <a href="Contact.html" class="btn">
+        Request a Commission!
+    </a>
 
-        <a href="Contact.html" class="btn">
-            Request a Commission!
-        </a>
-
-    </section>
+</section>
 
 </main>
 <script src="script.js"></script>
