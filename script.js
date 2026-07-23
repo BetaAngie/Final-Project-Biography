@@ -231,64 +231,77 @@ items:[
 
 ];
 
-let currentCategory = 0;
-
-function displayCategory(){
+let current = 0;
 
     const title = document.getElementById("category-title");
     const list = document.getElementById("prices-list");
+    const card = document.getElementById("price-card".:
+    
+  function updateCategory(direction){
 
-    if(!title || !list) return;
+    // Animate out
+    card.classList.add(
+        direction === "next"
+        ? "slide-out-left"
+        : "slide-out-right"
+    );
 
-    title.textContent = pricing[currentCategory].title;
+    setTimeout(() => {
 
-    let html = "<ul>";
+        // Remove outgoing animation
+        card.classList.remove(
+            "slide-out-left",
+            "slide-out-right"
+        );
 
-    pricing[currentCategory].items.forEach(item => {
+        // Update content
+        title.textContent = categories[current].title;
 
-        html += "<li>" + item + "</li>";
+        list.innerHTML = "";
 
-    });
+        categories[current].prices.forEach(price => {
 
-    html += "</ul>";
+            const p = document.createElement("p");
+            p.textContent = price;
+            list.appendChild(p);
+        });
 
-    list.innerHTML = html;
+        // Animate in
+        card.classList.add(
+            direction === "next"
+            ? "slide-in-right"
+            : "slide-in-left"
+        );
 
+        setTimeout(() => {
+            card.classList.remove(
+                "slide-in-right",
+                "slide-in-left"
+            );
+        },350);
+    },350);
 }
 
 function nextCategory(){
 
-    currentCategory++;
+    current++;
 
-    if(currentCategory >= pricing.length){
-
-        currentCategory = 0;
-
+    if(current >= categories.length){
+        current = 0;
     }
-
-    displayCategory();
-
+    updateCategory("next");
 }
 
 function previousCategory(){
 
-    currentCategory--;
+    current--;
 
-    if(currentCategory < 0){
-
-        currentCategory = pricing.length - 1;
-
+    if(current < 0){
+        current = categories.length - 1;
     }
 
-    displayCategory();
-
+    updateCategory("prev");
 }
 
-if(document.getElementById("category-title")){
-
-    displayCategory();
-
-}
-
-
-
+// Load first category
+updateCategory("next");
