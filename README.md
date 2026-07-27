@@ -7,19 +7,19 @@ I have chosen to do the responsive website.
 The website will prove as a biography and personal space bio that will include all the main things about me and what I do. It gives me my chance to shine on all my assets that I necessairly do not prove out otherwise. 
 
 ## Theme Interpretation
-Explain how the project responds to the theme of Space.
+I took the idea of space in two different aspects: Creative/Personal Space as well as Space like Outer Space. The Creative/Personal Space aspect is used as the overall purpose of this project as a portfolio and introduction page. The outer space idea is used by the actual color and photo choice I have used within the website itself, I used colors from a galaxy and a galaxy theme.
 
 ## Intended User or Player
-Who is the project designed for?
+There is no set user for this type of website. It can be classified as people who are interested in learning more about me and my services that I provide. It also gives me a chance to show my close peers as well as recruits a little but about my personality and works. 
 
 ## User or Player Goal
-What should the user or player accomplish?
+The user should accomplish how to navigate through the website without any problems and able to search directly of what they want (ex. commissions, contact, about me, etc). They should able to accomplish coming out of the website learning more about the person and portfolio information. 
 
 ## Main Features
-List the primary content, interactions, or game systems.
+The website has several interactable buttons and tabs which will lead to the main 5 different screens: Home, About Me, Portfolio, Commissions, Contact. The Home page, ultimately serves its purpose, a main hub to direct you to other tabs, also will serve as a small introductory page. The About Me tab will go more in depth about who I am, what my goals and ideals are. My portfolio page will show all my recent projects, my recent works as well as my resume. The commissions page goes into what I provide and create for others on a pay-basis. It'll contain all my information needed to open a commission with me. Lastly, the contact page is quite literally a page containing all my contact details and best way to reach out to me. 
 
 ## JavaScript Features
-Explain the JavaScript-controlled interactions.
+I have implemented several javascript intereactions on my website. 
 
 ## Responsive Design
 Explain how the experience adapts to different screen sizes.
