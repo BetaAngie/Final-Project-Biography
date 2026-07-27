@@ -19,10 +19,11 @@ The user should accomplish how to navigate through the website without any probl
 The website has several interactable buttons and tabs which will lead to the main 5 different screens: Home, About Me, Portfolio, Commissions, Contact. The Home page, ultimately serves its purpose, a main hub to direct you to other tabs, also will serve as a small introductory page. The About Me tab will go more in depth about who I am, what my goals and ideals are. My portfolio page will show all my recent projects, my recent works as well as my resume. The commissions page goes into what I provide and create for others on a pay-basis. It'll contain all my information needed to open a commission with me. Lastly, the contact page is quite literally a page containing all my contact details and best way to reach out to me. 
 
 ## JavaScript Features
-I have implemented several javascript intereactions on my website. 
+I have implemented several javascript intereactions on my website. First off is the basic and necessity for the project is the mobile navigation. On the about me I have several ideas implemented: Everytime you click on a new section of my about me the image will change. Another implementation is the random fun facts everytime you click teh button and then lastly a Typewriter affect. I also have an automatic age and an image lightbox. Other interactions is a download counter for my resume. My entire commissions page is run solely on javascript when it comes down to the pricing and the tabs with animations. 
 
 ## Responsive Design
 Explain how the experience adapts to different screen sizes.
+With the CSS mobile optimization and the javascript navigation bar, I was able to implement a navigation bar that minimizes itself when the screen gets smaller. The background itself also changes when you get to bigger and smaller screens. 
 
 ## User Testing
 Summarize who tested the project and what you learned.
@@ -37,7 +38,7 @@ Describe at least three changes made after testing.
 - GitHub Pages
 
 ## Credits
-List all outside assets, tutorials, fonts, images, icons, code references, and tools.
+W3Schools, Flaticon, Google, 
 
 ## Future Improvements
 Describe what you would add or improve with more time.

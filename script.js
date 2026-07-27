@@ -58,6 +58,14 @@ function changeImage(imagePath) {
 
     const aboutImage = document.querySelector(".about-image img");
 
+    image.style.opacity = 0;
+
+    setTimeout(() => {
+
+        image.src=imagePath;
+
+        image.style.opacity = 1;}, 250);
+
     if (!aboutImage) return;
 
     aboutImage.src = imagePath;
