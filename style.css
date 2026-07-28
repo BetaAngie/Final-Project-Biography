@@ -4,9 +4,10 @@ body{
     margin:0;
     padding-top:75px;
     min-height:100vh;
-    overflow-x:hiden;
+    overflow-x:hidden;
 
     /*Text*/
+    font-family: 'Poppins', sans-serif;
     color:#D8B4FE;
     text-shadow:
     0 0 6px rgba(216,180,254,.5);
@@ -67,8 +68,8 @@ header{
     font-size:18px;
 
     transition:
-        background-color 0.3 ease,
-        color 0.3 ease;}
+        background-color 0.3s ease,
+        color 0.3s ease;}
 
 .nav-links a:hover{
     color:#ffffff;
@@ -132,7 +133,7 @@ main{
     color:#F8F1FF;}
 
 /*Divider*/
-.divider{
+.hero.divider{
     width:220px;
     height:4px;
 
@@ -161,6 +162,7 @@ main{
 
     width:100%;
     max-width:280px;
+    padding:16px 30px;
     box-sizing:border-box;
 
     text-align:center;
@@ -168,7 +170,18 @@ main{
     color:white;
 
     background: rgba(200,162,255,.18);
-    border-radius:50px;}
+    border-radius:50px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;}
+
+.btn:hover{
+    transform:translateY(-4px);
+    background: rgba(200,162,255,.35);
+    box-shadow:
+        0 0 20px rgba(216,180,254,.45);}
 
 /*Hero Image*/    
 .hero-image{
@@ -193,16 +206,298 @@ main{
     box-shadow:
         0 0 20px rgba(255, 255, 255, 0.15),
         0 0 45px rgba(200, 162, 255, 0.45),
-        0 0 80px rgba(140, 110, 255, 0.35);}
+        0 0 80px rgba(140, 110, 255, 0.35);
 
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;}
 
+.hero-image img:hover{
+    transform:scale(1.04);
+
+    box-shadow:
+        0 0 30px rgba(255,255,255,.2),
+        0 0 60px rgba(200,162,255,.5);
+
+}
 
 /* ---------------- ABOUT ME PAGE -------------------- */
-.about-image img{
+.about-container{
 
-    width:100%;
+    width:90%;
+    max-width:1400px;
+
+    margin:50px auto;
+
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:50px;
+
+    align-items:start;}
+
+/* =====================================================
+   LEFT SIDEBAR
+===================================================== */
+.about-sidebar{
+    position:sticky;
+    top:100px;
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;}
+
+.about-image{
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(216,180,254,.15);
     border-radius:20px;
+
+    padding:15px;
+
+    backdrop-filter:blur(12px);
+
+    text-align:center;}
+
+.about-image img{
+    width:100%;
+    border-radius:15px;
+
+    transition:
+    opacity .25s ease,
+    transform .35s ease;
+
+    box-shadow:
+    0 0 20px rgba(216,180,254,.35);}
+
+.about-image img:hover{
+    transform:scale(1.03);}
+
+.about-links{
+    display:flex;
+    flex-direction:column;
+    gap:15px;}
+
+.about-links button{
+    width:100%;
+    padding:15px;
+
+    border:none;
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.05);
+    color:#D8B4FE;
+    font-size:1rem;
+
     transition:.3s;
+
+    border:1px solid rgba(216,180,254,.15);}
+
+.about-links button:hover{
+    background:#D8B4FE;
+    color:#0d1224;
+
+    transform:translateX(8px);}
+
+.about-links button.active{
+    background:#D8B4FE;
+    color:#0d1224;
+
+    transform:translateX(8px);
+
+    box-shadow:
+    0 0 20px rgba(216,180,254,.4);}
+
+/* =====================================================
+   RIGHT CONTENT
+===================================================== */
+.about-content{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+
+    padding:40px;
+
+    border:1px solid rgba(216,180,254,.15);}
+
+.about-content h1{
+    font-size:3rem;
+
+    margin-top:0;
+    text-align:center;}
+
+.about-content h2{
+    color:#D8B4FE;
+
+    margin-top:0;}
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+.about.divider{
+    width:120px;
+    height:2px;
+    margin:25px auto;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #D8B4FE,
+        transparent
+    );}
+
+/* =====================================================
+   INTRO CARD
+===================================================== */
+.intro-card{
+    background:rgba(255,255,255,.04);
+
+    border-left:4px solid #D8B4FE;
+    border-radius:12px;
+
+    padding:20px;
+    margin-bottom:25px;
+    line-height:1.8;}
+
+/* =====================================================
+   AGE CARD
+===================================================== */
+.age-card{
+    display:inline-flex;
+    align-items:center;
+
+    gap:15px;
+    padding:12px 22px;
+
+    background:rgba(255,255,255,.05);
+    border-radius:12px;
+    border:1px solid rgba(216,180,254,.2);
+
+    margin-bottom:30px;}
+
+.age-card h3{
+    margin:0;
+    font-size:1.5rem;}
+
+/* =====================================================
+   DYNAMIC SECTION
+===================================================== */
+.dynamic-section{
+    margin-bottom:35px;}
+
+#section-title,
+#section-text{
+    transition:opacity .25s ease;}
+
+#section-text{
+    line-height:1.8;}
+
+/* =====================================================
+   FUN FACT
+===================================================== */
+.fun-facts{
+    text-align:center;}
+
+.fact-button{
+    padding:14px 28px;
+    margin:20px 0;
+
+    border:none;
+    border-radius:30px;
+
+    cursor:pointer;
+
+    background:#D8B4FE;
+    color:#0d1224;
+    font-weight:bold;
+
+    transition:.3s;}
+
+.fact-button:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 20px rgba(216,180,254,.45);}
+
+.fact-card{
+    min-height:70px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    border-radius:15px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(216,180,254,.15);
+
+    transition:opacity .25s ease;
+    line-height:1.6;}
+
+/* =====================================================
+   STATS
+===================================================== */
+.about-stats{
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+    margin-top:20px;}
+
+.stat-card{
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(216,180,254,.15);
+    border-radius:15px;
+    padding:20px;
+
+    transition:.3s;}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 0 20px rgba(216,180,254,.25);}
+
+.stat-card h3{
+    margin-top:0;
+    color:#D8B4FE;}
+
+.stat-card p{
+    margin:8px 0;
+    line-height:1.5;}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width:900px){
+    .about-container{
+        grid-template-columns:1fr;}
+
+    .about-sidebar{
+        position:static;
+        width:100%;
+
+        align-items:center;}
+
+    .about-image{
+        width:100%;
+        max-width:320px;}
+
+    .about-links{
+        width:100%;
+        max-width:320px;}
+
+    .about-content{
+        padding:25px;}
+
+    .about-content h1{
+        font-size:2.3rem;}
 }
 
 /* ---------------- COMMISSIONS PAGE --------------------*/
@@ -281,7 +576,7 @@ main{
     align-items:center;
     flex-wrap:nowrap;
 
-    gap:10px}
+    gap:10px;}
 
 /*Price Card*/
 .price-card{
@@ -399,7 +694,7 @@ main{
         transform:translateX(0);}}
 
 /*COMMISSION BUTTON*/
-.btn{
+.commission.btn{
     display:inline-block;
     width:fit-content;
 
@@ -552,7 +847,7 @@ main{
 .social-links a:hover{
     transform:translateY(-8px);
     color:#D8B4F3;
-    background:rbga(216,180,254,.3);
+    background:rgba(216,180,254,.3);
     box-shadow: 0 0 18px rgba(216,180,254,.6);}
 
 .social-links a i{
@@ -584,14 +879,14 @@ main{
         0 0 50px rgba(140, 110, 255, 0.25);}
 
 .contact-form h2{
-    margin-bottom:15.px;
+    margin-bottom:15px;
 
     text-align:center;
     font-size:2.5rem;
     color:#F8F1FF;
     text-shadow:
         0 0 10px rgba(255,255,255,.4),
-        0 0 25px rbga(200,160,255,.5);}
+        0 0 25px rgba(200,160,255,.5);}
 
 /*Form Inputs CSS*/   
 .contact-form input,
@@ -806,7 +1101,7 @@ body{
     transform: translateY(-3px);
     background: rgba(200,162,255,.35);
     box-shadow:
-        0 0 20px rgba(216,180,254,.45);}
+        0 0 20px rgba(216,180,254,.45);}}
 
 /* ================================
     COMMISSIONS PAGE MOBILE 
@@ -902,5 +1197,4 @@ body{
     .contact-form input[type="submit"] {
         width:100%;
         margin-top:20px; }
-}
 }

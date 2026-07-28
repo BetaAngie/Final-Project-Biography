@@ -50,6 +50,7 @@ if (typingElement) {
 
 }
 
+
 /* =====================================================
    ABOUT ME - IMAGE SWITCHER
 ===================================================== */
@@ -58,17 +59,101 @@ function changeImage(imagePath) {
 
     const aboutImage = document.querySelector(".about-image img");
 
-    image.style.opacity = 0;
+    if (!aboutImage) return;
+
+    aboutImage.style.opacity = "0";
 
     setTimeout(() => {
 
-        image.src=imagePath;
+        aboutImage.src = imagePath;
+        aboutImage.style.opacity = "1";
 
-        image.style.opacity = 1;}, 250);
+    }, 250);
 
-    if (!aboutImage) return;
+}
 
-    aboutImage.src = imagePath;
+
+/* =====================================================
+   ABOUT ME - SECTION SWITCHER
+===================================================== */
+
+const sections = {
+
+    interests: {
+
+        title: "My Interests",
+
+        image: "Images/interests.jpeg",
+
+        text:
+        "Outside of school, I enjoy gaming—especially rhythm games—cosplaying, digital art, and creating content. I enjoy learning new skills and expressing myself through different forms of media. I also enjoy hanging out with my friends and going on trips, whether they're far away or nearby."
+
+    },
+
+    goals: {
+
+        title: "My Goals",
+
+        image: "Images/goals.jpg",
+
+        text:
+        "My main goal is to become a game artist and designer, allowing me to express my creativity while contributing to the gaming industry. This website showcases my artwork, projects, and creative journey."
+
+    },
+
+    facts: {
+
+        title: "Fun Facts",
+
+        image: "Images/funfacts.jpg",
+
+        text:
+        "Click the button below to generate a random fun fact about me!"
+
+    }
+
+};
+
+function loadSection(section) {
+
+    const title = document.getElementById("section-title");
+    const text = document.getElementById("section-text");
+
+    if (!title || !text) return;
+
+    /* Fade Out */
+
+    title.style.opacity = "0";
+    text.style.opacity = "0";
+
+    setTimeout(() => {
+
+        title.textContent = sections[section].title;
+        text.textContent = sections[section].text;
+
+        title.style.opacity = "1";
+        text.style.opacity = "1";
+
+    }, 250);
+
+    changeImage(sections[section].image);
+
+    /* Highlight Active Button */
+
+    document.querySelectorAll(".about-links button").forEach(button => {
+
+        button.classList.remove("active");
+
+    });
+
+    const activeButton =
+        document.querySelector(`button[onclick="loadSection('${section}')"]`);
+
+    if (activeButton) {
+
+        activeButton.classList.add("active");
+
+    }
 
 }
 
@@ -94,22 +179,27 @@ function newFact() {
 
     if (!factElement) return;
 
-    const randomIndex = Math.floor(Math.random() * funFacts.length);
+    factElement.style.opacity = "0";
 
-    factElement.textContent = funFacts[randomIndex];
+    setTimeout(() => {
+
+        const randomIndex = Math.floor(Math.random() * funFacts.length);
+
+        factElement.textContent = funFacts[randomIndex];
+
+        factElement.style.opacity = "1";
+
+    }, 250);
 
 }
-
 
 /* =====================================================
    ABOUT ME - AUTOMATIC AGE
 ===================================================== */
 
 const ageElement = document.getElementById("age");
-
 if (ageElement) {
 
-    // Month is zero-based (1 = February)
     const birthday = new Date(2006, 1, 19);
 
     const today = new Date();
@@ -121,23 +211,28 @@ if (ageElement) {
         today.getMonth() - birthday.getMonth();
 
     if (
-
         monthDifference < 0 ||
-
         (
             monthDifference === 0 &&
             today.getDate() < birthday.getDate()
         )
-
     ) {
-
-        currentAge--;
-
-    }
+        currentAge--;}
 
     ageElement.textContent = currentAge;
 
 }
+
+
+/* =====================================================
+   ABOUT ME - PAGE LOAD
+===================================================== */
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    loadSection("interests");
+
+});
 
 /* =====================================================
    PORTFOLIO - IMAGE LIGHTBOX

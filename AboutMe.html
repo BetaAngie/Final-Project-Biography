@@ -11,8 +11,8 @@
 
 <header>
     <nav class="navbar">
-        <div class="menu-toggle" id="mobile-menu">☰</div>
 
+        <div class="menu-toggle" id="mobile-menu">☰</div>
 
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -23,72 +23,118 @@
         </ul>
 
         <div class="star">✦</div>
+
     </nav>
 </header>
 
 <main>
 
-    <section class="about-container">
-
-<!-- Add Image -->
-      <div class="about-image">
-            <img src="" alt="Photo of Lumi">
+<section class="about-container">
+    <!-- LEFT SIDE -->
+    <aside class="about-sidebar">
+        <div class="about-image">
+            <img src="Images/aboutme.jpg" alt="Photo of Lumi">
         </div>
-<!-- Add Images -->
-    <div class="about-links">
-        <p onclick="changeImage('')">My Interests</p>
-        <p onclick="changeImage('')">My Goals</p>
-        <p onclick="changeImage('')">Fun Facts</p>
-    </div>
 
-        <div class="about-content">
-
-            <h1>About Me</h1>
-
-            <hr>
-
-            <h2>Hello!</h2>    
-
-            <p id="typing"></p>
-            <p>Age:
-            <span id="age"></span>
-            </p>
-            
-            <hr>
-
-            <h2>My Interests</h2>
-
-            <p>
-                Outside of school, I enjoy gaming; especially rhythm games; cosplaying,
-                digital art, and creating content. I enjoy learning
-                new creative skills and expressing myself through different forms of media.
-                I also enjoy hanging out with my friends and going on trips, whether they're far away or nearby. 
-            </p>
-
-            <hr>
-
-            <h2>My Goals</h2>
-
-            <p>
-                My main goal is to become a game artist and designer, which allows me to express
-                my creativity and contribution to the gaming industry. I will use this platform
-                to showcase my projects and artwork i've created for my passion of game design.
-            </p>
-
-            <hr>
-<h2> Click here to generate a random fun fact about me!</h2>
-            <button onclick="newFact()">
-            Random Fun Fact
+        <div class="about-links">
+            <button onclick="loadSection('interests')">
+                My Interests
             </button>
-
-            <p id="fact"></p>
-
-            <h3 id="category-title"></h3>
+            <button onclick="loadSection('goals')">
+                My Goals
+            </button>
+            <button onclick="loadSection('facts')">
+                ⭐ Fun Facts
+            </button>
         </div>
+    </aside>
+
+    <!-- RIGHT SIDE -->
+    <section class="about-content">
+        <h1>About Me</h1>
+
+        <div class="about.divider"></div>
+
+        <h2>Hello!</h2>
+
+        <div class="intro-card">
+            <p id="typing"></p>
+        </div>
+
+        <div class="age-card">
+            <span>🎂 Age</span>
+            <h3 id="age"></h3>
+        </div>
+
+        <div class="about.divider"></div>
+
+        <!-- Dynamic Section -->
+        <section class="dynamic-section">
+            <h2 id="section-title">
+                My Interests
+            </h2>
+            <p id="section-text">
+
+                Outside of school, I enjoy gaming—especially rhythm games—
+                cosplaying, digital art, and creating content. I enjoy
+                learning new creative skills and expressing myself through
+                different forms of media. I also enjoy hanging out with
+                friends and traveling whenever I have the chance.
+
+            </p>
+        </section>
+
+        <div class="about.divider"></div>
+
+        <!-- Fun Fact Generator -->
+        <section class="fun-facts">
+            <h2>✨ Random Fun Fact</h2>
+            <p>
+                Click the button below to learn something random about me!
+            </p>
+            <button class="fact-button" onclick="newFact()">
+                Generate Fun Fact
+            </button>
+            <div id="fact" class="fact-card">
+                Your fun fact will appear here!
+            </div>
+        </section>
+
+        <div class="about.divider"></div>
+
+        <!-- Extra Stats -->
+
+        <section class="about-stats">
+
+            <div class="stat-card">
+                <h3>Games</h3>
+                <p>Playing since 2016</p>
+                <p>Identity V Competitive since 2022</p>
+
+            </div>
+
+            <div class="stat-card">
+                <h3>Cosplay</h3>
+                <p>Cosplaying since 2019</p>
+                <p>Competitively since 2021</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Digital Art</h3>
+                <p>Creating artwork since 2020</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>🎓 Education</h3>
+                <p>Visual Art Management @ UCF</p>
+            </div>
+        </section>
     </section>
+</section>
+
 </main>
 
-<script src="script.js"></script>    
-    
+<script src="script.js"></script>
+
 </body>
 </html>
