@@ -26,10 +26,11 @@ Explain how the experience adapts to different screen sizes.
 With the CSS mobile optimization and the javascript navigation bar, I was able to implement a navigation bar that minimizes itself when the screen gets smaller. The background itself also changes when you get to bigger and smaller screens. 
 
 ## User Testing
-Summarize who tested the project and what you learned.
+I had two individuals who tested my website and gave detailed thoughts about how they feel with the website. They had great responses and the entire navigation and website was fairly clean and polished. The only issues that were persistent was the lack of viewing the images and the portfolio page looking a bit bland. The responsive design worked well on all screens as everything had been condensed down to stacked cards instead of side to side with the pc version of the website. They answered all my question and gave me great feedback to fix up the font on the form box in the contact me page. 
 
 ## Revisions
 Describe at least three changes made after testing.
+After the initial testing I had went ahead and updated the entirety of the About me page, adding interactive images as well as text that changes every time you click a specific section. I also had tweaked some grammar and language typos another tester has pointed out to me so that it is more concise. 
 
 ## Technologies Used
 - HTML
@@ -38,7 +39,7 @@ Describe at least three changes made after testing.
 - GitHub Pages
 
 ## Credits
-W3Schools, Flaticon, Google, Stack OVerflow, Google Images, Pinterest, 
+W3Schools, Flaticon, Google, Stack OVerflow, Google Images, Pinterest, Claude (For Typo and Grammer on Coding)
 Image Credits: Home Page: (oni_gyaru & hyrule_video on instagram); About Me/Interests/FunFact Img(Self Taken); Goals Img (redpandacaptures on instagram).
 
 ## Future Improvements
