@@ -511,6 +511,107 @@ main{
         font-size:2.3rem;}
 }
 
+/* ------------------- PORTFOLIO PAGE ----------------------- */
+.portfolio-header{
+    text-align:center;
+    padding:70px 40px;
+    margin-bottom:60px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(216,180,254,.08),
+            rgba(255,255,255,.02));
+
+    border-radius:30px;
+    border:1px solid rgba(216,180,254,.2);
+    backdrop-filter:blur(15px);
+    box-shadow:
+        0 0 30px rgba(216,180,254,.15);}
+
+.portfolio-header h1{
+    font-size:3.8rem;
+    margin-bottom:20px;}
+
+.portfolio-header p{
+    max-width:700px;
+    margin:auto;
+
+    color:#d8d4e8;
+    line-height:1.7;}
+
+/* Search Bar */
+#searchBar{
+    width:100%;
+    max-width:600px;
+
+    display:block;
+
+    margin:50px auto;
+    padding:18px 25px;
+
+    border-radius:40px;
+    border:1px solid rgba(216,180,254,.25);
+    background:rgba(20,15,45,.55);
+    color:white;
+    font-size:1rem;
+    backdrop-filter:blur(12px);
+
+    transition:.3s;}
+
+#searchBar:focus{
+    outline:none;
+
+    border-color:#D8B4FE;
+    box-shadow:
+        0 0 25px rgba(216,180,254,.35);}
+
+/* Expand Boxes */
+.expand-box{
+    margin:40px auto;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(35,25,70,.55),
+            rgba(20,15,45,.45));
+
+    border:1px solid rgba(216,180,254,.2);
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.3);}
+
+.expand-box summary{
+    cursor:pointer;
+
+    padding:25px 35px;
+
+    font-size:1.5rem;
+    font-weight:bold;
+    list-style:none;
+
+    transition:.3s;}
+
+.expand-box summary:hover{
+    background:
+        rgba(216,180,254,.08);}
+
+summary::-webkit-details-marker{
+    display:none;}
+.expand-box summary::after{
+    content:"+";
+    float:right;
+    font-size:1.8rem;
+
+    transition:.3s;}
+
+.expand-box[open] summary::after{
+    content:"−";}
+
 /* ---------------- COMMISSIONS PAGE --------------------*/
 .commissions-page{
     width:90%;
