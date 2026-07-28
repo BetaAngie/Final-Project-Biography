@@ -927,6 +927,10 @@ main{
         0 0 15px rgba(216,180,254,.45);
     background:rgba(36, 9, 38, 0.09);}
 
+::placeholder {
+    color: rgba(216, 180, 253, 0.35);
+    opacity: 1;}
+
 /* ----------- HORIZONTAL GALAXY DIVIDER --------------- */
 .galaxy-divider-h {
  display: flex;
