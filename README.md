@@ -38,7 +38,8 @@ Describe at least three changes made after testing.
 - GitHub Pages
 
 ## Credits
-W3Schools, Flaticon, Google, 
+W3Schools, Flaticon, Google, Stack OVerflow, Google Images, Pinterest, 
+Image Credits: Home Page: (oni_gyaru & hyrule_video on instagram); About Me/Interests/FunFact Img(Self Taken); Goals Img (redpandacaptures on instagram).
 
 ## Future Improvements
 Describe what you would add or improve with more time.
