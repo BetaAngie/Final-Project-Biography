@@ -39,7 +39,7 @@ After the initial testing I had went ahead and updated the entirety of the About
 - GitHub Pages
 
 ## Credits
-W3Schools, Flaticon, Google, Stack OVerflow, Google Images, Pinterest, Claude (For Typo and Grammer on Coding)
+W3Schools, Flaticon, Google, Stack Overflow, Google Images, Pinterest, Claude (For Typo and Grammer on Coding), Mmdn, HTML Viewer, 
 Image Credits: Home Page: (oni_gyaru & hyrule_video on instagram); About Me/Interests/FunFact Img(Self Taken); Goals Img (redpandacaptures on instagram).
 
 ## Future Improvements
