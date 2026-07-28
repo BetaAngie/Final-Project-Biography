@@ -880,7 +880,7 @@ main{
     box-sizing:border-box;
     color: #F8F1FF;
 
-    background: rgba(20, 15, 45, 0.55);
+    background: rgba(33, 27, 59, 0.55);
     backdrop-filter: blur(15px);
 
     border: 1px solid rgba(216, 180, 253, 0.35);
@@ -912,6 +912,7 @@ main{
     background:rgba(255,255,255,.05);
 
     font-size:16px;
+    color:#D8B4F3;
     outline:none;
     
     transition:
@@ -924,7 +925,7 @@ main{
     border-color:#D8B4FE;
     box-shadow:
         0 0 15px rgba(216,180,254,.45);
-    background:rgba(255,255,255,.09);}
+    background:rgba(36, 9, 38, 0.09);}
 
 /* ----------- HORIZONTAL GALAXY DIVIDER --------------- */
 .galaxy-divider-h {
