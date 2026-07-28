@@ -20,38 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* =====================================================
-   ABOUT ME - TYPEWRITER ANIMATION
-===================================================== */
-
-const typingElement = document.getElementById("typing");
-
-if (typingElement) {
-
-    const introduction =
-        "My name is Lumi. I'm a Visual Art Management student at UCF who enjoys game design, cosplay, rhythm games, and creating digital art.";
-
-    let currentCharacter = 0;
-
-    function typeWriter() {
-
-        if (currentCharacter < introduction.length) {
-
-            typingElement.textContent += introduction.charAt(currentCharacter);
-
-            currentCharacter++;
-
-            setTimeout(typeWriter, 40);
-
-        }
-
-    }
-
-    typeWriter();
-
-}
-
-
-/* =====================================================
    ABOUT ME - IMAGE SWITCHER
 ===================================================== */
 
@@ -79,23 +47,24 @@ function changeImage(imagePath) {
 
 const sections = {
 
+       about: {
+
+        title: "About Me",
+        image: "Images/aboutme.jpg",
+        text: "My name is Lumi. I'm a Visual Art Management student at UCF who enjoys game design, rhythm games, cosplay, digital art, and creating content. I love expressing my creativity through different forms of media and hope to become a game artist and designer." },
+
     interests: {
 
         title: "My Interests",
-
-        image: "Images/interests.jpeg",
-
+        image: "Images/interests.jpg",
         text:
-        "Outside of school, I enjoy gaming—especially rhythm games—cosplaying, digital art, and creating content. I enjoy learning new skills and expressing myself through different forms of media. I also enjoy hanging out with my friends and going on trips, whether they're far away or nearby."
-
+        "Outside of school, I enjoy gaming—especially rhythm games—cosplaying, digital art, and creating content. I enjoy learning new skills and expressing myself through different forms of media. I also enjoy hanging out with my friends and going on trips, whether they're far away or nearby. Game wise, I love Identity V, Visual Novels, Roblox, Minecraft and more!"
     },
 
     goals: {
 
         title: "My Goals",
-
         image: "Images/goals.jpg",
-
         text:
         "My main goal is to become a game artist and designer, allowing me to express my creativity while contributing to the gaming industry. This website showcases my artwork, projects, and creative journey."
 
@@ -104,9 +73,7 @@ const sections = {
     facts: {
 
         title: "Fun Facts",
-
-        image: "Images/funfacts.jpg",
-
+        image: "Images/funfact.jpg",
         text:
         "Click the button below to generate a random fun fact about me!"
 
@@ -169,7 +136,9 @@ const funFacts = [
     "I started taking my artwork seriously in 2020.",
     "I am the eldest of four girls.",
     "I won Best Group and Best Cosplay at the 2025 Supercon Talent Show.",
-    "I've played competitive gaming for three years."
+    "I've played competitive gaming for three years.",
+    "I have a boyfriend who cosplays and plays games with me!",
+    "My favorite type of games is visual novels."
 
 ];
 
@@ -230,7 +199,7 @@ if (ageElement) {
 
 window.addEventListener("DOMContentLoaded", () => {
 
-    loadSection("interests");
+    loadSection("about");
 
 });
 
