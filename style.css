@@ -747,9 +747,10 @@ hr{
 
 	box-shadow:
 		0 10px 30px rgba(0,0,0,.3),
-		0 0 20px rgba(216,180,254,.1)
+		0 0 20px rgba(216,180,254,.1);
 
-	transition:0.35s ease;}
+	transition: 0.35s ease;
+}
 
 .commission-text h2{
     margin-bottom:20px;}
