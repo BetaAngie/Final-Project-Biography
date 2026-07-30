@@ -77,17 +77,20 @@
 
         <summary>View Resume</summary>
 
-        <object data="Resume.pdf"
-                type="application/pdf"
-                width="100%"
-                height="800">
-<!-- Adjust PDF for Resume -->
-            <p>
-                Click here to download the resume: 
-                <a href="Images/Resume.pdf" download onclick="resumeDownload()">Download Resume</a>
-            </p>
+        <div class="resume-preview">
+            <object 
+                data="Images/Resume.pdf#page=1"
+                type="application/pdf">
+            </object>
 
-        </object>
+        <a href="Images/Resume.pdf"
+        download
+        class="download-btn"
+        onclick="resumeDownload()">
+        Download Resume Here.
+        </a>
+        
+        </div>
 
     </details>
 
