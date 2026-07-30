@@ -657,6 +657,31 @@ summary::-webkit-details-marker{
     box-shadow:
         0 0 35px rgba(216,180,254,.45);}
 
+/*PROJECTS*/        
+.project-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-decoration:none;
+    color:#D8B4FE;
+}
+
+.project-card img{
+    width:100%;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.project-card img:hover{
+    transform:scale(1.05);
+}
+
+.project-card h3{
+    margin-top:10px;
+    font-size:1.1rem;
+    text-align:center;
+}
+
 /*LIGHTBOX*/
 .lightbox{
     position:fixed;

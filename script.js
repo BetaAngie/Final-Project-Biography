@@ -204,6 +204,20 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 /* =====================================================
+   PORTFOLIO - SEARCH PROJECTS INQ 
+===================================================== */
+function searchProjects() {
+    const input = document.getElementById("searchBar").value.toLowerCase();
+    const projects = document.querySelectorAll(".project-card");
+
+    projects.forEach(project => {
+        const title = project.querySelector("h3").textContent.toLowerCase();
+
+        project.style.display = title.includes(input) ? "" : "none";
+    });
+}
+
+/* =====================================================
    PORTFOLIO - IMAGE LIGHTBOX
 ===================================================== */
 
@@ -245,27 +259,6 @@ function resumeDownload() {
     if (!counter) return;
 
     counter.textContent = downloadCount;
-
-}
-
-
-/* =====================================================
-   SCROLL TO TOP BUTTON
-===================================================== */
-
-const topButton = document.getElementById("topButton");
-
-if (topButton) {
-
-    window.addEventListener("scroll", () => {
-
-        const scrollPosition =
-            document.documentElement.scrollTop;
-
-        topButton.style.display =
-            scrollPosition > 300 ? "block" : "none";
-
-    });
 
 }
 
