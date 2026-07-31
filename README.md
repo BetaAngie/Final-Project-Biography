@@ -29,8 +29,7 @@ With the CSS mobile optimization and the javascript navigation bar, I was able t
 I had two individuals who tested my website and gave detailed thoughts about how they feel with the website. They had great responses and the entire navigation and website was fairly clean and polished. The only issues that were persistent was the lack of viewing the images and the portfolio page looking a bit bland. The responsive design worked well on all screens as everything had been condensed down to stacked cards instead of side to side with the pc version of the website. They answered all my question and gave me great feedback to fix up the font on the form box in the contact me page. 
 
 ## Revisions
-Describe at least three changes made after testing.
-After the initial testing I had went ahead and updated the entirety of the About me page, adding interactive images as well as text that changes every time you click a specific section. I also had tweaked some grammar and language typos another tester has pointed out to me so that it is more concise. 
+After the initial testing I had went ahead and updated the entirety of the About me page, adding interactive images as well as text that changes every time you click a specific section. I also had tweaked some grammar and language typos another tester has pointed out to me so that it is more concise. Another thing I had changed after testing was making the portfolio search bar work when you search the name only the title of the project will show up. Lastly, I had thought it would have been a great idea to see a preview of my resume before downloading it so I had made that possible too using a bit of javascript. 
 
 ## Technologies Used
 - HTML
@@ -39,8 +38,9 @@ After the initial testing I had went ahead and updated the entirety of the About
 - GitHub Pages
 
 ## Credits
-W3Schools, Flaticon, Google, Stack Overflow, Google Images, Pinterest, Claude (For Typo and Grammer on Coding), Mmdn, HTML Viewer, DEV Community, 
+W3Schools, Flaticon, Google, Stack Overflow, Google Images, Pinterest, Claude (For Typo and Grammer on Coding), MMDN, HTML Viewer, DEV Community, 
 Image Credits: Home Page: (oni_gyaru & hyrule_video on instagram); About Me/Interests/FunFact Img(Self Taken); Goals Img (redpandacaptures on instagram).
 
 ## Future Improvements
 Describe what you would add or improve with more time.
+With what I had to finish, I didn't finish adding more details with the commission page, I wish I had done some more tweaks with the actual project itself. Of course, I will keep working on this in my own time accordance. I will also plan to add more projects and figure out a way to seperate the projects and similarly have differebt kinds of projects being shown with more detail once time passes. 

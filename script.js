@@ -74,8 +74,6 @@ const sections = {
 
         title: "Fun Facts",
         image: "Images/funfact.jpg",
-        text:
-        "Click the button below to generate a random fun fact about me!"
 
     }
 
